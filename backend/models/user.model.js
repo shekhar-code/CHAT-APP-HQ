@@ -27,8 +27,8 @@ const userSchema = new mongoose.Schema(
 		},
 		status: {
 			type: String,
-			enum: ['AVAILABLE', 'BUSY'],
-			default: 'AVAILABLE'
+			// enum: ['AVAILABLE', 'BUSY'],
+			default: "AVAILABLE"
 		}, // Enum ensures only 'AVAILABLE' or 'BUSY' values
 		// createdAt, updatedAt => Member since <createdAt>
 	},

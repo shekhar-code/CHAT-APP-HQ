@@ -140,11 +140,14 @@ The chat application allows users to send and receive messages in real-time. It'
   - `GET /api/users/:id`: Get user online status.
     - Response: `{ "status": "AVAILABLE" }`
 
+
+
 ### Environment Configurations
 
 Ensure the following environment variables are configured:
 - `MONGODB_URI`: MongoDB connection string.
 - `JWT_SECRET`: Secret key for JWT token generation.
-- `LLM_API_KEY`: API key for accessing the language model API.
+- `LLM_API_KEY`: API key for accessing the language model API i.e huggingface (model - mistral 7b).
+- `LLM_API_TOKEN`:API token for huggingface model
 
 

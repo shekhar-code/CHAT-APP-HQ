@@ -2,7 +2,6 @@ import { Server } from "socket.io";
 import http from "http";
 import express from "express";
 import { setUserStatus} from "../controllers/auth.controller.js";
-// import { generateResponse } from "../controllers/auth.controller.js";
 
 const app = express();
 

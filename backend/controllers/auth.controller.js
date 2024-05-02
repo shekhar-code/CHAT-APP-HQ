@@ -116,13 +116,20 @@ export const setUserStatus = async (userId, status) => {
 	}
 };
 
+import mongoose from 'mongoose';
+
 export const getUserStatus = async (userId) => {
 	try {
-			const user = await User.findById(userId);
-			return user.status || 'AVAILABLE'; // Assuming status field exists in the User model
+		if (!mongoose.isValidObjectId(userId)) {
+			// Return 'AVAILABLE' if userId is not a valid ObjectId
+			return 'AVAILABLE';
+		}
+
+		const user = await User.findById(userId);
+		return user ? (user.status || 'AVAILABLE') : 'AVAILABLE'; // Return user status if user exists, otherwise return 'AVAILABLE'
 	} catch (error) {
-			console.log("Error in getUserStatus function: ", error.message);
-			return 'BUSY'; // Default status if user not found or error occurs
+		console.log("Error in getUserStatus function: ", error.message);
+		return 'BUSY'; // Default status if error occurs
 	}
 };
 // Function to generate response using LLM API
