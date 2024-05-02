@@ -1,0 +1,27 @@
+{
+	"id": "639064e1-1bbb-4f00-a660-4dfb6e25a768",
+	"name": "chat-app-backend",
+	"values": [
+		{
+			"key": "server",
+			"value": "http://localhost:5000/api",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "userid",
+			"value": "6633333781ca4552b14e01ae",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "recieverid",
+			"value": "6632a3c0348747ead0b7f0de",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-05-02T14:13:33.002Z",
+	"_postman_exported_using": "Postman/10.22.13"
+}
